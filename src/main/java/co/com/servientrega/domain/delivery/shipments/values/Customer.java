@@ -11,7 +11,7 @@ public abstract class Customer implements ValueObject<Sender.Props> {
     protected String DNI;
     protected String address;
 
-    protected interface Props {
+    public interface Props {
         String fullName();
 
         String phoneNumber();
