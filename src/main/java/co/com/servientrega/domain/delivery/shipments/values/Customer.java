@@ -7,14 +7,14 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class Customer implements ValueObject<Sender.Props> {
     private String fullName;
-    private Integer age;
+    private String phoneNumber;
     private String DNI;
     private String address;
 
     public interface Props {
         String fullName();
 
-        Integer age();
+        String phoneNumber();
 
         String DNI();
 
@@ -30,8 +30,8 @@ public abstract class Customer implements ValueObject<Sender.Props> {
             }
 
             @Override
-            public Integer age() {
-                return age;
+            public String phoneNumber() {
+                return phoneNumber;
             }
 
             @Override
