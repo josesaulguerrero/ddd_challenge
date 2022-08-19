@@ -1,6 +1,6 @@
-package co.com.servientrega.domain.infrastructure.id.strategies;
+package co.com.servientrega.infrastructure.id.strategies;
 
-import co.com.servientrega.domain.infrastructure.id.IdGenerationStrategy;
+import co.com.servientrega.infrastructure.id.IdGenerationStrategy;
 
 import java.util.UUID;
 
