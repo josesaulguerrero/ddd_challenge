@@ -14,6 +14,11 @@ public class DeliveryOrderId extends Identity {
         this.value = idGenerationStrategy.generate();
     }
 
+    public DeliveryOrderId(String value) {
+        super(value);
+        this.value = value;
+    }
+
     @Override
     public String value() {
         return this.value;
