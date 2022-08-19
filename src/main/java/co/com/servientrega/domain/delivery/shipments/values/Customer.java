@@ -6,12 +6,12 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class Customer implements ValueObject<Sender.Props> {
-    private String fullName;
-    private String phoneNumber;
-    private String DNI;
-    private String address;
+    protected String fullName;
+    protected String phoneNumber;
+    protected String DNI;
+    protected String address;
 
-    public interface Props {
+    protected interface Props {
         String fullName();
 
         String phoneNumber();
