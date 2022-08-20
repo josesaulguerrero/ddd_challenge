@@ -8,11 +8,11 @@ import co.com.sofka.domain.generic.DomainEvent;
 public class ManagerAdded extends DomainEvent {
     private final OfficeId officeId;
     private final EmployeeId managerId;
-    protected final DNI dni;
-    protected final FullName fullName;
-    protected final Email email;
-    protected final PhoneNumber phoneNumber;
-    protected final Salary salary;
+    private final DNI dni;
+    private final FullName fullName;
+    private final Email email;
+    private final PhoneNumber phoneNumber;
+    private final Salary salary;
 
 
     public ManagerAdded(OfficeId officeId, EmployeeId managerId, DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
