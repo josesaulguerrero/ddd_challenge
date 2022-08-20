@@ -7,11 +7,13 @@ import co.com.sofka.domain.generic.DomainEvent;
 public class ManagerChanged extends DomainEvent {
     private final OfficeId officeId;
     private final EmployeeId previousManagerId;
+    private final EmployeeId newManagerId;
 
-    public ManagerChanged(OfficeId officeId, EmployeeId previousManagerId) {
+    public ManagerChanged(OfficeId officeId, EmployeeId previousManagerId, EmployeeId newManagerId) {
         super("Servientrega.offices.ManagerChanged");
         this.officeId = officeId;
         this.previousManagerId = previousManagerId;
+        this.newManagerId = newManagerId;
     }
 
     public OfficeId officeId() {
@@ -20,5 +22,9 @@ public class ManagerChanged extends DomainEvent {
 
     public EmployeeId previousManagerId() {
         return previousManagerId;
+    }
+
+    public EmployeeId newManagerId() {
+        return newManagerId;
     }
 }
