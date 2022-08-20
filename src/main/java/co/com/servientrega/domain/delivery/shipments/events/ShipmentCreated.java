@@ -7,7 +7,7 @@ public class ShipmentCreated extends DomainEvent {
     private final ShipmentId shipmentId;
 
     public ShipmentCreated(ShipmentId shipmentId) {
-        super("Servientrega.domain.ShipmentCreated");
+        super("Servientrega.shipments.ShipmentCreated");
         this.shipmentId = shipmentId;
     }
 
