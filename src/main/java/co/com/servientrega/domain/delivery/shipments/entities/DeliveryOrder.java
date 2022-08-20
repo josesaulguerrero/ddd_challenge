@@ -25,24 +25,6 @@ public class DeliveryOrder extends Entity<DeliveryOrderId> {
         this.addressee = addressee;
     }
 
-    public void changeAddresseeAddress(String address) {
-        this.addressee = new Addressee(
-                this.addressee.value().fullName(),
-                this.addressee.value().phoneNumber(),
-                this.addressee.value().DNI(),
-                address
-        );
-    }
-
-    public void changeAddresseePhoneNumber(String phoneNumber) {
-        this.addressee = new Addressee(
-                this.addressee.value().fullName(),
-                phoneNumber,
-                this.addressee.value().DNI(),
-                this.addressee.value().address()
-        );
-    }
-
     public Sender sender() {
         return sender;
     }
