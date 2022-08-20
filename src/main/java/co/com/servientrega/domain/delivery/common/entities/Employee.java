@@ -7,19 +7,29 @@ import co.com.sofka.domain.generic.Entity;
 public abstract class Employee extends Entity<EmployeeId> {
     protected final DNI dni;
     protected final FullName fullName;
-    protected Location location;
     protected Email email;
     protected PhoneNumber phoneNumber;
     protected Salary salary;
 
-    protected Employee(EmployeeId entityId, DNI dni, FullName fullName, Location location, Email email, PhoneNumber phoneNumber, Salary salary) {
+    protected Employee(EmployeeId entityId, DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
         super(entityId);
         this.dni = dni;
         this.fullName = fullName;
-        this.location = location;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.salary = salary;
+    }
+
+    public void changeEmail(Email newEmail) {
+        this.email = newEmail;
+    }
+
+    public void changePhoneNumber(PhoneNumber newPhoneNumber) {
+        this.phoneNumber = newPhoneNumber;
+    }
+
+    public void changeSalary(Salary newSalary) {
+        this.salary = newSalary;
     }
 
     public DNI dni() {
@@ -28,10 +38,6 @@ public abstract class Employee extends Entity<EmployeeId> {
 
     public FullName fullName() {
         return fullName;
-    }
-
-    public Location location() {
-        return location;
     }
 
     public Email email() {
