@@ -8,4 +8,8 @@ public class Manager extends Employee {
     public Manager(EmployeeId entityId, DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
         super(entityId, dni, fullName, email, phoneNumber, salary);
     }
+
+    public Manager(DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
+        super(dni, fullName, email, phoneNumber, salary);
+    }
 }
