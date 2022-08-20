@@ -7,7 +7,7 @@ import co.com.sofka.domain.generic.Command;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class CalculateDeliveryPrice extends Command {
+public class CalculateDeliveryCost extends Command {
     private final ShipmentId shipmentId;
     private final Size packageSize;
     private final Weight packageWeight;
