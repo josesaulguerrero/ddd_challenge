@@ -1,5 +1,6 @@
 package co.com.servientrega.domain.delivery.shipments.commands;
 
+import co.com.servientrega.domain.delivery.common.values.Size;
 import co.com.servientrega.domain.delivery.shipments.values.*;
 import co.com.sofka.domain.generic.Command;
 import lombok.AllArgsConstructor;
