@@ -13,12 +13,13 @@ public class Invoice extends Entity<InvoiceId> {
         this.cost = cost;
     }
 
-    public void changeCost(Money newCost) {
-        this.cost = newCost;
+    public Invoice(Money cost) {
+        super(new InvoiceId());
+        this.cost = cost;
     }
 
-    public Invoice(Money cost) {
-        this(new InvoiceId(), cost);
+    public void changeCost(Money newCost) {
+        this.cost = newCost;
     }
 
     public Money cost() {
