@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Set;
 
 public class Office extends AggregateEvent<OfficeId> {
-    private Store store;
-    private Manager manager;
-    private Location location;
+    protected Store store;
+    protected Manager manager;
+    protected Location location;
 
     public Office(OfficeId entityId) {
         super(entityId);
