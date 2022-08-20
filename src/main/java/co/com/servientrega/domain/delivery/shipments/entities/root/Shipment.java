@@ -26,18 +26,13 @@ public class Shipment extends AggregateEvent<ShipmentId> {
         subscribe(new ShipmentEventListener(this));
     }
 
-    public Shipment(Invoice invoice, Package item, DeliveryOrder deliveryOrder, Date sentAt) {
-        this(new ShipmentId(), invoice, item, deliveryOrder, sentAt, null);
-    }
-
-    public Shipment(ShipmentId entityId, Invoice invoice, Package item, DeliveryOrder deliveryOrder, Date sentAt, Date deliveredAt) {
-        super(entityId);
-        this.invoice = invoice;
-        this.item = item;
-        this.deliveryOrder = deliveryOrder;
+    public Shipment(ShipmentId shipmentId, Date sentAt, Date deliveredAt) {
+        super(shipmentId);
         this.sentAt = sentAt;
         this.deliveredAt = deliveredAt;
-        super.appendChange(new ShipmentCreated(this.identity())).apply();
+        super
+                .appendChange(new ShipmentCreated(this.identity(), sentAt, deliveredAt))
+                .apply();
     }
 
     public static Shipment from(ShipmentId id, List<DomainEvent> events) {
