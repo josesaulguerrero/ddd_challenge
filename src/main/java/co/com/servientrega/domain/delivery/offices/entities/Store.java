@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Store extends Entity<StoreId> {
-    private final Size capacity;
+    private Size capacity;
     private final Set<ShipmentId> shipmentsIds;
 
     public Store(StoreId entityId, Size capacity, Set<ShipmentId> shipmentsIds) {
@@ -22,6 +22,18 @@ public class Store extends Entity<StoreId> {
         super(new StoreId());
         this.capacity = capacity;
         this.shipmentsIds = new HashSet<>();
+    }
+
+    public void addShipment(ShipmentId shipmentId) {
+        this.shipmentsIds.add(shipmentId);
+    }
+
+    public void empty() {
+        this.shipmentsIds.clear();
+    }
+
+    public void changeCapacity(Size newCapacity) {
+        this.capacity = newCapacity;
     }
 
     public Size capacity() {
