@@ -15,11 +15,11 @@ import co.com.sofka.domain.generic.DomainEvent;
 import java.util.List;
 
 public class Shipment extends AggregateEvent<ShipmentId> {
-    private Invoice invoice;
-    private Package item;
-    private DeliveryOrder deliveryOrder;
-    private Date sentAt;
-    private Date deliveredAt;
+    protected Invoice invoice;
+    protected Package item;
+    protected DeliveryOrder deliveryOrder;
+    protected Date sentAt;
+    protected Date deliveredAt;
 
     public Shipment(ShipmentId entityId) {
         super(entityId);
