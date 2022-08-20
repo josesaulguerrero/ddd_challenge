@@ -12,8 +12,14 @@ public class Store extends Entity<StoreId> {
     private final Size capacity;
     private final Set<ShipmentId> shipmentsIds;
 
-    public Store(StoreId entityId, Size capacity) {
+    public Store(StoreId entityId, Size capacity, Set<ShipmentId> shipmentsIds) {
         super(entityId);
+        this.capacity = capacity;
+        this.shipmentsIds = shipmentsIds;
+    }
+
+    public Store(Size capacity) {
+        super(new StoreId());
         this.capacity = capacity;
         this.shipmentsIds = new HashSet<>();
     }

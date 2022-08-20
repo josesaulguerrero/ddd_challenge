@@ -20,6 +20,15 @@ public abstract class Employee extends Entity<EmployeeId> {
         this.salary = salary;
     }
 
+    protected Employee(DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
+        super(new EmployeeId());
+        this.dni = dni;
+        this.fullName = fullName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.salary = salary;
+    }
+
     public void changeEmail(Email newEmail) {
         this.email = newEmail;
     }
@@ -43,6 +52,7 @@ public abstract class Employee extends Entity<EmployeeId> {
     public Email email() {
         return email;
     }
+
 
     public PhoneNumber phoneNumber() {
         return phoneNumber;
