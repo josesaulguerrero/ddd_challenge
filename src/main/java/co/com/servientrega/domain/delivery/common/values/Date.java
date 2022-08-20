@@ -1,7 +1,6 @@
-package co.com.servientrega.domain.delivery.shipments.values;
+package co.com.servientrega.domain.delivery.common.values;
 
 import co.com.sofka.domain.generic.ValueObject;
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 import java.time.LocalDateTime;

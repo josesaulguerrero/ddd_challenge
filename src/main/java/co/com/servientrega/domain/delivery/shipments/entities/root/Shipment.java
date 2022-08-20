@@ -1,5 +1,6 @@
 package co.com.servientrega.domain.delivery.shipments.entities.root;
 
+import co.com.servientrega.domain.delivery.common.values.Date;
 import co.com.servientrega.domain.delivery.common.values.Size;
 import co.com.servientrega.domain.delivery.shipments.entities.DeliveryOrder;
 import co.com.servientrega.domain.delivery.shipments.entities.Invoice;

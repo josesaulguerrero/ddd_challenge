@@ -4,7 +4,7 @@ import co.com.servientrega.domain.delivery.shipments.entities.DeliveryOrder;
 import co.com.servientrega.domain.delivery.shipments.entities.Invoice;
 import co.com.servientrega.domain.delivery.shipments.entities.Package;
 import co.com.servientrega.domain.delivery.shipments.events.*;
-import co.com.servientrega.domain.delivery.shipments.values.Date;
+import co.com.servientrega.domain.delivery.common.values.Date;
 import co.com.sofka.domain.generic.EventChange;
 
 public class ShipmentEventListener extends EventChange {

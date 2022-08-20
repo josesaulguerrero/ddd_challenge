@@ -1,4 +1,4 @@
-package co.com.servientrega.domain.delivery.offices.identity;
+package co.com.servientrega.domain.delivery.common.identity;
 
 import co.com.servientrega.infrastructure.id.IdGenerationStrategy;
 import co.com.servientrega.infrastructure.id.strategies.UUIDGenerationStrategy;
