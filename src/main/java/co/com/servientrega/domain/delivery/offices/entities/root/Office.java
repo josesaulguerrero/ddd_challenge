@@ -43,9 +43,9 @@ public class Office extends AggregateEvent<OfficeId> {
                 .apply();
     }
 
-    public void addManager(OfficeId officeId, EmployeeId managerId) {
+    public void addManager(OfficeId officeId, EmployeeId managerId, DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
         super
-                .appendChange(new ManagerAdded(officeId, managerId))
+                .appendChange(new ManagerAdded(officeId, managerId, dni, fullName, email, phoneNumber, salary))
                 .apply();
     }
 
