@@ -37,9 +37,9 @@ public class Office extends AggregateEvent<OfficeId> {
         return office;
     }
 
-    public void addStore(OfficeId officeId, StoreId storeId) {
+    public void addStore(OfficeId officeId, StoreId storeId, Size capacity) {
         super
-                .appendChange(new StoreAdded(officeId, storeId))
+                .appendChange(new StoreAdded(officeId, storeId, capacity))
                 .apply();
     }
 
@@ -55,9 +55,9 @@ public class Office extends AggregateEvent<OfficeId> {
                 .apply();
     }
 
-    public void changeManager(OfficeId officeId, EmployeeId employeeId, EmployeeId newManagerId) {
+    public void changeManager(OfficeId officeId, EmployeeId employeeId, EmployeeId newManagerId, DNI newManagerDNI, FullName newManagerFullName, Email newManagerEmail, PhoneNumber newManagerPhoneNumber, Salary newManagerSalary) {
         super
-               .appendChange(new ManagerChanged(officeId, employeeId, newManagerId))
+               .appendChange(new ManagerChanged(officeId, employeeId, newManagerId, newManagerDNI, newManagerFullName, newManagerEmail, newManagerPhoneNumber, newManagerSalary))
                .apply();
     }
 
