@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor()
 public class Date implements ValueObject<LocalDateTime> {
     private LocalDateTime value;
 
