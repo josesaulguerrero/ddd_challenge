@@ -31,8 +31,6 @@ Msrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Money.java,
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/CreateShipment.java,1\f\1fdff2917ea7f5f5f35a1162dd4ae02fa0eb7ca9
 ˆ
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/DeliverPackage.java,6\f\6f8896f0ba1f28e4e651d62c1f8022b503ce51d1
-~
-Nsrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Weight.java,f\6\f6dcd5d181851bb19a3c02607bff3c79beb9ea3d
 „
 Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/AddPackage.java,5\0\50297971c090f4ed7d51526390e849372f2f8db4
 ‰
