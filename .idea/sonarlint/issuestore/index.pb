@@ -35,8 +35,6 @@ Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/DeliverPac
 Nsrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Weight.java,f\6\f6dcd5d181851bb19a3c02607bff3c79beb9ea3d
 Ñ
 Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/AddPackage.java,5\0\50297971c090f4ed7d51526390e849372f2f8db4
-á
-Wsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/DeliveryOrder.java,6\9\69fa305311b55d0c03678b95628ca0f6fc7551b1
 â
 Ysrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/ChangeAddressee.java,7\f\7ff413e17b9fea46038285d445786592f3caa6ae
 ã
@@ -75,16 +73,12 @@ _src/main/java/co/com/servientrega/domain/delivery/shipments/commands/CalculateD
 ^src/main/java/co/com/servientrega/domain/delivery/shipments/events/CalculatedDeliveryCost.java,b\c\bce87cf79b5d2903357a7a91794fb856b81c9fc9
 à
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageDelivered.java,4\f\4f6bd8c5978b9e55837c9e15b03174f0ee47c6dc
-Å
-Qsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/Invoice.java,8\c\8ca86de5720604cdc1de90aa726f22d1add91178
 ë
 asrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageDescriptionChanged.java,7\c\7c16789a657ec9b1151564882e10b840eeb64d7e
 î
 dsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/root/ShipmentEventListener.java,1\8\18f35fce7ef210661d879ab62b5badf413aeba79
 á
 Wsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/root/Shipment.java,6\1\61e75b95f2cff07492fbad2c537b9be54b37df35
-Å
-Qsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/Package.java,5\2\52b830eddbc1cae73552ad0a5db62dafddde7574
 y
 Isrc/main/java/co/com/servientrega/domain/delivery/common/values/Size.java,9\d\9d0b33dd4b24ab8add776d90d9294e696eb48b8f
 ~
@@ -115,7 +109,3 @@ Osrc/main/java/co/com/servientrega/domain/delivery/offices/identity/StoreId.java
 Zsrc/main/java/co/com/servientrega/domain/delivery/offices/commands/ChangeManagerEmail.java,3\4\34cf8fc99ac1cee9a7c75d4eff979d7231913ec9
 Ö
 Usrc/main/java/co/com/servientrega/domain/delivery/offices/commands/ChangeManager.java,f\d\fdfbb1686f27829789547985f9a371e1b7120d08
-ã
-[src/main/java/co/com/servientrega/domain/delivery/offices/commands/ChangeStoreCapacity.java,c\3\c3f8c775c8d2d67530403021c3b847c8589ec757
-é
-^src/main/java/co/com/servientrega/domain/delivery/offices/commands/StartShipmentsDelivery.java,8\0\803833e74ae2b7c4961c7886ff62acf0e7352f43
