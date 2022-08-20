@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 public class AddInvoice extends Command {
     private final ShipmentId shipmentId;
     // Todo private final ManagerId managerId;
-    private final Money calculatePrice; // todo calculate price based on package size and weight?
+    private final Money calculatedCost; // todo calculate price based on package size and weight?
 
     public ShipmentId shipmentId() {
         return shipmentId;
@@ -17,7 +17,7 @@ public class AddInvoice extends Command {
 
     //todo add mangerid getter
 
-    public Money calculatePrice() {
-        return calculatePrice;
+    public Money calculateCost() {
+        return calculatedCost;
     }
 }
