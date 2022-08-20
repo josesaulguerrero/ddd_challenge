@@ -5,8 +5,8 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class FullName implements ValueObject<FullName.Props> {
-    private String name;
-    private String lastName;
+    private final String name;
+    private final String lastName;
 
     public interface Props {
         String name();

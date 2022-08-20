@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.regex.Pattern;
 
 public class DNI implements ValueObject<String> {
-    private String value;
+    private final String value;
 
     public DNI(String value) {
         DNI.validateString(value);
@@ -21,6 +21,6 @@ public class DNI implements ValueObject<String> {
 
     @Override
     public String value() {
-        return null;
+        return value;
     }
 }
