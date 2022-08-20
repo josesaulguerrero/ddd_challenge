@@ -1,22 +1,29 @@
 package co.com.servientrega.domain.delivery.transports.events;
 
 import co.com.servientrega.domain.delivery.common.values.*;
+import co.com.servientrega.domain.delivery.transports.identity.TransportId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class DriverAdded extends DomainEvent {
+    private final TransportId transportId;
     private final DNI dni;
     private final FullName fullName;
     private final Email email;
     private final PhoneNumber phoneNumber;
     private final Salary salary;
 
-    public DriverAdded(DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
+    public DriverAdded(TransportId transportId, DNI dni, FullName fullName, Email email, PhoneNumber phoneNumber, Salary salary) {
         super("Servientrega.transports.DriverAdded");
+        this.transportId = transportId;
         this.dni = dni;
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.salary = salary;
+    }
+
+    public TransportId transportId() {
+        return transportId;
     }
 
     public DNI dni() {
