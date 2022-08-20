@@ -15,6 +15,12 @@ public class DeliveryOrder extends Entity<DeliveryOrderId> {
         this.addressee = addressee;
     }
 
+    public DeliveryOrder(Sender sender, Addressee addressee) {
+        super(new DeliveryOrderId());
+        this.sender = sender;
+        this.addressee = addressee;
+    }
+
     public void changeAddressee(Addressee addressee) {
         this.addressee = addressee;
     }
