@@ -75,8 +75,6 @@ _src/main/java/co/com/servientrega/domain/delivery/shipments/commands/CalculateD
 ^src/main/java/co/com/servientrega/domain/delivery/shipments/events/CalculatedDeliveryCost.java,b\c\bce87cf79b5d2903357a7a91794fb856b81c9fc9
 à
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageDelivered.java,4\f\4f6bd8c5978b9e55837c9e15b03174f0ee47c6dc
-á
-Wsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/ShipmentCreated.java,8\b\8bd462ec4cf042a10c44d655dfe11e8c1d44a669
 Å
 Qsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/Invoice.java,8\c\8ca86de5720604cdc1de90aa726f22d1add91178
 ë
@@ -117,8 +115,6 @@ Osrc/main/java/co/com/servientrega/domain/delivery/offices/identity/StoreId.java
 Zsrc/main/java/co/com/servientrega/domain/delivery/offices/commands/ChangeManagerEmail.java,3\4\34cf8fc99ac1cee9a7c75d4eff979d7231913ec9
 Ö
 Usrc/main/java/co/com/servientrega/domain/delivery/offices/commands/ChangeManager.java,f\d\fdfbb1686f27829789547985f9a371e1b7120d08
-ä
-Zsrc/main/java/co/com/servientrega/domain/delivery/offices/commands/AddShipmentToStore.java,9\e\9e98c3b37c08e750848dac886f967e17d87a3bb9
 ã
 [src/main/java/co/com/servientrega/domain/delivery/offices/commands/ChangeStoreCapacity.java,c\3\c3f8c775c8d2d67530403021c3b847c8589ec757
 é

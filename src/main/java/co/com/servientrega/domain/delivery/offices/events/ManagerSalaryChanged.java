@@ -2,7 +2,7 @@ package co.com.servientrega.domain.delivery.offices.events;
 
 import co.com.servientrega.domain.delivery.common.identity.EmployeeId;
 import co.com.servientrega.domain.delivery.offices.identity.OfficeId;
-import co.com.servientrega.domain.delivery.offices.values.Salary;
+import co.com.servientrega.domain.delivery.common.values.Salary;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class ManagerSalaryChanged extends DomainEvent {

@@ -1,7 +1,10 @@
 package co.com.servientrega.domain.delivery.offices.commands;
 
+import co.com.servientrega.domain.delivery.common.values.DNI;
+import co.com.servientrega.domain.delivery.common.values.Email;
+import co.com.servientrega.domain.delivery.common.values.PhoneNumber;
+import co.com.servientrega.domain.delivery.common.values.Salary;
 import co.com.servientrega.domain.delivery.offices.identity.OfficeId;
-import co.com.servientrega.domain.delivery.offices.values.*;
 import co.com.sofka.domain.generic.Command;
 import lombok.AllArgsConstructor;
 
