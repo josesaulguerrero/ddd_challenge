@@ -25,7 +25,7 @@ public class PackageDescriptionChanged extends DomainEvent {
         return packageId;
     }
 
-    public PackageDescription packageDescription() {
+    public PackageDescription newPackageDescription() {
         return packageDescription;
     }
 }

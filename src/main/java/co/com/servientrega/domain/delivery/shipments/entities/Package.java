@@ -25,20 +25,20 @@ public class Package extends Entity<PackageId> {
         this(new PackageId(), name, description, weight, size);
     }
 
-    public void changeName(String name) {
-        this.name = new PackageName(name);
+    public void changeName(PackageName name) {
+        this.name = name;
     }
 
-    public void changeDescription(String description) {
-        this.description = new PackageDescription(description);
+    public void changeDescription(PackageDescription description) {
+        this.description = description;
     }
 
-    public void changeWeight(Double weight) {
-        this.weight = new Weight(weight);
+    public void changeWeight(Weight weight) {
+        this.weight = weight;
     }
 
-    public void changeSize(Double height, Double width, Double length) {
-        this.size = new Size(height, width, length);
+    public void changeSize(Size size) {
+        this.size = size;
     }
 
     public PackageName packageName() {
