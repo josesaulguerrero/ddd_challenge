@@ -1,4 +1,4 @@
-package co.com.servientrega.domain.delivery.transports.entities.root;
+package co.com.servientrega.domain.delivery.transports.entities;
 
 import co.com.servientrega.domain.delivery.common.entities.Employee;
 import co.com.servientrega.domain.delivery.common.identity.EmployeeId;
