@@ -1,7 +1,6 @@
 package co.com.servientrega.domain.delivery.transports.commands;
 
 import co.com.servientrega.domain.delivery.common.values.*;
-import co.com.servientrega.domain.delivery.transports.entities.root.Transport;
 import co.com.servientrega.domain.delivery.transports.identity.TransportId;
 import co.com.sofka.domain.generic.Command;
 import lombok.AllArgsConstructor;

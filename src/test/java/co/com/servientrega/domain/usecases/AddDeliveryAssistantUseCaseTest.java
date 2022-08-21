@@ -34,7 +34,7 @@ class AddDeliveryAssistantUseCaseTest {
         BDDMockito
                 .when(this.eventRepository.getEventsBy(transportId.value()))
                 .thenReturn(List.of(
-                        new DeliveryAssistantAdded(
+                        new DriverAdded(
                                 transportId,
                                 new DNI("54654654234"),
                                 new FullName("driver", "last name"),
