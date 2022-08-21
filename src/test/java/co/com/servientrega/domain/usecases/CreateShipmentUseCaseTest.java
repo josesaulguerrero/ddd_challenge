@@ -1,13 +1,8 @@
 package co.com.servientrega.domain.usecases;
 
-import co.com.servientrega.domain.delivery.common.identity.EmployeeId;
 import co.com.servientrega.domain.delivery.common.values.*;
 import co.com.servientrega.domain.delivery.shipments.commands.CreateShipment;
 import co.com.servientrega.domain.delivery.shipments.events.ShipmentCreated;
-import co.com.servientrega.domain.delivery.shipments.values.Addressee;
-import co.com.servientrega.domain.delivery.shipments.values.PackageDescription;
-import co.com.servientrega.domain.delivery.shipments.values.PackageName;
-import co.com.servientrega.domain.delivery.shipments.values.Sender;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
 import org.assertj.core.api.Assertions;
@@ -27,14 +22,7 @@ class CreateShipmentUseCaseTest {
     @DisplayName("Test for CreateShipmentUseCase#executeUseCase")
     void executeUseCase() {
         // Arrange
-        EmployeeId issuerId = new EmployeeId();
-        Sender sender = new Sender("Pepito Suarez", "3420384923", "24343830", "Street 34 # 45 - 34");
-        Addressee addressee = new Addressee("Juanito Gonzales", "324324234", "657474653", "Street 23 # 123 - 67");
-        PackageName packageName = new PackageName("Apple Seeds");
-        PackageDescription packageDescription = new PackageDescription("Seeds of a healthy apple tree.");
-        Weight packageWeight = new Weight(0.1);
-        Size packageSize = new Size(0.1, 0.1, 0.1);
-        CreateShipment command = new CreateShipment(issuerId, sender, addressee, packageName, packageDescription, packageWeight, packageSize);
+        CreateShipment command = new CreateShipment(Date.now());
         CreateShipmentUseCase useCase = new CreateShipmentUseCase();
 
         // Act
@@ -49,7 +37,7 @@ class CreateShipmentUseCaseTest {
         // Assert
         Assertions.assertThat(event.shipmentId()).isNotNull();
         Assertions.assertThat(event.sentAt().value()).isBefore(LocalDateTime.now());
-        Assertions.assertThat(event.deliveredAt().value()).isNull();
+        Assertions.assertThat(event.deliveredAt()).isNull();
     }
 
     private static String generateRandomUUID() {
