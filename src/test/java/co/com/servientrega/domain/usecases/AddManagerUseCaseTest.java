@@ -49,7 +49,7 @@ class AddManagerUseCaseTest {
         Email email = new Email("juanito@gmail.com");
         PhoneNumber phoneNumber = new PhoneNumber("38450483509");
         Salary salary = new Salary(new BigDecimal(2000000));
-        AddManager command = new AddManager(dni, fullName, email, phoneNumber, salary);
+        AddManager command = new AddManager(new OfficeId(this.randomUUID), dni, fullName, email, phoneNumber, salary);
         AddManagerUseCase useCase = new AddManagerUseCase();
         useCase.addRepository(this.eventRepository);
 
@@ -65,7 +65,7 @@ class AddManagerUseCaseTest {
         // Assert
         assertThat(event.managerId()).isNotNull();
         assertThat(event.dni().value()).isEqualTo(dni.value());
-        assertThat(event.fullName().value()).isEqualTo(fullName.value());
+        assertThat(event.fullName()).isEqualTo(fullName);
         assertThat(event.email().value()).isEqualTo(email.value());
         assertThat(event.phoneNumber().value()).isEqualTo(phoneNumber.value());
         assertThat(event.salary().value()).isEqualTo(salary.value());
