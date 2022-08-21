@@ -35,7 +35,7 @@ public class Shipment extends AggregateEvent<ShipmentId> {
         this.sentAt = sentAt;
         this.deliveredAt = deliveredAt;
         super
-                .appendChange(new ShipmentCreated(this.identity(), sentAt, deliveredAt))
+                .appendChange(new ShipmentCreated(shipmentId, sentAt, deliveredAt))
                 .apply();
     }
 
