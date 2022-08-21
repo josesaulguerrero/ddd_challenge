@@ -24,11 +24,9 @@ public class Office extends AggregateEvent<OfficeId> {
         super.subscribe(new OfficeEventListener(this));
     }
 
-    public Office(OfficeId entityId, Store store, Manager manager, Location location) {
+    public Office(OfficeId entityId, Location location) {
         super(entityId);
-        this.store = store;
-        this.manager = manager;
-        this.location = location;
+        super.appendChange(new CreatedOffice(entityId, Date.now(), location)).apply();
     }
 
     public static Office from(OfficeId officeId, List<DomainEvent> events) {
@@ -57,8 +55,8 @@ public class Office extends AggregateEvent<OfficeId> {
 
     public void changeManager(OfficeId officeId, EmployeeId employeeId, EmployeeId newManagerId, DNI newManagerDNI, FullName newManagerFullName, Email newManagerEmail, PhoneNumber newManagerPhoneNumber, Salary newManagerSalary) {
         super
-               .appendChange(new ManagerChanged(officeId, employeeId, newManagerId, newManagerDNI, newManagerFullName, newManagerEmail, newManagerPhoneNumber, newManagerSalary))
-               .apply();
+                .appendChange(new ManagerChanged(officeId, employeeId, newManagerId, newManagerDNI, newManagerFullName, newManagerEmail, newManagerPhoneNumber, newManagerSalary))
+                .apply();
     }
 
     public void changeManagerEmail(OfficeId officeId, EmployeeId managerId, Email newEmail) {
