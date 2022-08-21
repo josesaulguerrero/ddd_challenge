@@ -20,6 +20,8 @@ public class Transport extends AggregateEvent<TransportId> {
     protected Size sizeCapacity;
     protected Weight capacityInKg;
 
+    protected Set<ShipmentId> shipmentIds;
+
     public Transport(TransportId entityId) {
         super(entityId);
         subscribe(new TransportEventListener(this));
@@ -119,5 +121,9 @@ public class Transport extends AggregateEvent<TransportId> {
 
     public Weight capacityInKg() {
         return capacityInKg;
+    }
+
+    public Set<ShipmentId> shipmentIds() {
+        return shipmentIds;
     }
 }

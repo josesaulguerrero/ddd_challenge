@@ -73,10 +73,6 @@ _src/main/java/co/com/servientrega/domain/delivery/shipments/commands/CalculateD
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageDelivered.java,4\f\4f6bd8c5978b9e55837c9e15b03174f0ee47c6dc
 ‘
 asrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageDescriptionChanged.java,7\c\7c16789a657ec9b1151564882e10b840eeb64d7e
-”
-dsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/root/ShipmentEventListener.java,1\8\18f35fce7ef210661d879ab62b5badf413aeba79
-‡
-Wsrc/main/java/co/com/servientrega/domain/delivery/shipments/entities/root/Shipment.java,6\1\61e75b95f2cff07492fbad2c537b9be54b37df35
 y
 Isrc/main/java/co/com/servientrega/domain/delivery/common/values/Size.java,9\d\9d0b33dd4b24ab8add776d90d9294e696eb48b8f
 ~
