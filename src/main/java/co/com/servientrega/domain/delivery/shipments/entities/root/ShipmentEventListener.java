@@ -21,7 +21,7 @@ public class ShipmentEventListener extends EventChange {
             }
             instance.invoice = new Invoice(
                     event.invoiceId(),
-                    issuerId, event.price()
+                    event.issuerId(), event.price()
             );
         });
 
