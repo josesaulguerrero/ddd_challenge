@@ -41,7 +41,7 @@ class AddManagerUseCaseTest {
     }
 
     @Test
-    @DisplayName("Test for AddPackageUseCase#executeUseCase")
+    @DisplayName("Test for AddManagerUseCase#executeUseCase")
     void executeUseCase() {
         // Arrange
         DNI dni = new DNI("4320509443");
