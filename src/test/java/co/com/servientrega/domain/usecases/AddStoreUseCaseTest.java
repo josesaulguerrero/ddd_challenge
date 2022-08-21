@@ -49,7 +49,7 @@ class AddStoreUseCaseTest {
     @DisplayName("Test for AddStoreUseCase#executeUseCase")
     void executeUseCase() {
         // Arrange
-        AddStore command = new AddStore(new Size(20.0, 20.0, 20.0));
+        AddStore command = new AddStore(new OfficeId(this.randomUUID), new Size(20.0, 20.0, 20.0));
         AddStoreUseCase useCase = new AddStoreUseCase();
         useCase.addRepository(this.eventRepository);
 
