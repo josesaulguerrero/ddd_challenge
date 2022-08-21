@@ -1,6 +1,4 @@
 
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 ä
 Zsrc/main/java/co/com/servientrega/infrastructure/id/strategies/UUIDGenerationStrategy.java,1\e\1e68d737cda6f3fa0d64f363f1d691ac9c87df83
 }
@@ -15,10 +13,6 @@ Ssrc/main/java/co/com/servientrega/domain/delivery/shipments/identity/PackageId.
 Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/identity/ShipmentId.java,6\8\68e221949b70cadf787bfbc42d0fac187dc5d19a
 ~
 Nsrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Sender.java,5\1\51b8b20a53f559a93fc2a238b93de24d4568e742
-Ä
-Psrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Customer.java,a\e\ae19a03eb68a0a920423650723ba16c429c5a6b9
-Å
-Qsrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Addressee.java,0\9\09a402a23a10ea4f7af8fd959cff61c98eb16f49
 |
 Lsrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Date.java,7\d\7d7ffdc1c6c4138f632c005567df820c08cf75c8
 É
@@ -29,8 +23,6 @@ Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/values/PackageDescr
 Msrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Money.java,3\b\3b2c7c719ca3f91c286ade678b02774a078781dc
 à
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/DeliverPackage.java,6\f\6f8896f0ba1f28e4e651d62c1f8022b503ce51d1
-Ñ
-Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/AddPackage.java,5\0\50297971c090f4ed7d51526390e849372f2f8db4
 â
 Ysrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/ChangeAddressee.java,7\f\7ff413e17b9fea46038285d445786592f3caa6ae
 ã
@@ -39,8 +31,6 @@ Ysrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/ChangeAddr
 bsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/ChangePackageDescription.java,e\5\e582e58be95168157b37e416a3f9b88438a7175e
 ã
 [src/main/java/co/com/servientrega/domain/delivery/shipments/commands/ChangePackageSize.java,3\6\363414253f0585de104148f24431a7a6f55e1d0b
-ç
-]src/main/java/co/com/servientrega/domain/delivery/shipments/commands/ChangePackageWeight.java,2\1\21054164f68bd05b1f355bf0a15e4cdc865dd2a8
 ã
 [src/main/java/co/com/servientrega/domain/delivery/shipments/commands/ChangeInvoiceCost.java,6\d\6de16890503cfa14a677d6afe84d4042d1a9672a
 ä
@@ -49,14 +39,8 @@ Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/InvoiceCostC
 Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageNameChanged.java,3\c\3cbfafaa51205a772a35314ec7f8165e08393adb
 ä
 Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageSizeChanged.java,d\5\d56fd4a35c2f6cad192394c2473f7c8c12cfe6d8
-ä
-Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/AddDeliveryOrder.java,4\b\4b7a76465991b842d60d5c691cfca9042a4127bb
-ä
-Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/DeliveryOrderAdded.java,0\e\0e188555fc07979155175e147e7fb7f4a006b544
 à
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/AddresseeChanged.java,7\c\7c5f4c488e882b8a5882e15cee3397760836db00
-è
-_src/main/java/co/com/servientrega/domain/delivery/shipments/commands/CalculateDeliveryCost.java,0\f\0fd50a708b72687e9c44bed212f131555bd8cbca
 é
 ^src/main/java/co/com/servientrega/domain/delivery/shipments/events/CalculatedDeliveryCost.java,b\c\bce87cf79b5d2903357a7a91794fb856b81c9fc9
 à
