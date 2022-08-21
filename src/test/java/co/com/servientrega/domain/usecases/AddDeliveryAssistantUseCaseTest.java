@@ -59,7 +59,7 @@ class AddDeliveryAssistantUseCaseTest {
         useCase.addRepository(this.eventRepository);
 
         // Act
-        DriverAdded event = (DriverAdded) UseCaseHandler
+        DeliveryAssistantAdded event = (DeliveryAssistantAdded) UseCaseHandler
                 .getInstance()
                 .setIdentifyExecutor(randomUUID)
                 .syncExecutor(useCase, new RequestCommand<>(command))
