@@ -1,11 +1,11 @@
 package co.com.servientrega.domain.delivery.shipments.events;
 
+import co.com.servientrega.domain.delivery.common.values.Weight;
 import co.com.servientrega.domain.delivery.shipments.identity.PackageId;
 import co.com.servientrega.domain.delivery.shipments.identity.ShipmentId;
 import co.com.servientrega.domain.delivery.shipments.values.PackageDescription;
 import co.com.servientrega.domain.delivery.shipments.values.PackageName;
 import co.com.servientrega.domain.delivery.common.values.Size;
-import co.com.servientrega.domain.delivery.shipments.values.Weight;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class PackageAdded extends DomainEvent {

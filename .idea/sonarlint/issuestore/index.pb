@@ -28,8 +28,6 @@ Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/values/PackageDescr
 }
 Msrc/main/java/co/com/servientrega/domain/delivery/shipments/values/Money.java,3\b\3b2c7c719ca3f91c286ade678b02774a078781dc
 à
-Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/CreateShipment.java,1\f\1fdff2917ea7f5f5f35a1162dd4ae02fa0eb7ca9
-à
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/DeliverPackage.java,6\f\6f8896f0ba1f28e4e651d62c1f8022b503ce51d1
 Ñ
 Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/AddPackage.java,5\0\50297971c090f4ed7d51526390e849372f2f8db4
@@ -51,18 +49,10 @@ Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/InvoiceCostC
 Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageNameChanged.java,3\c\3cbfafaa51205a772a35314ec7f8165e08393adb
 ä
 Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageSizeChanged.java,d\5\d56fd4a35c2f6cad192394c2473f7c8c12cfe6d8
-å
-\src/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageWeightChanged.java,c\3\c3e90878f8cfb6fb6a98bd26cb46cc593b680e21
-Ñ
-Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/InvoiceAdded.java,2\6\26ffd3984e91417be7507dd3f33903aa6b11d7e6
-Ñ
-Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/AddInvoice.java,4\d\4db4c75a5348b4d89153ed7067f394665674adb7
 ä
 Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/commands/AddDeliveryOrder.java,4\b\4b7a76465991b842d60d5c691cfca9042a4127bb
 ä
 Zsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/DeliveryOrderAdded.java,0\e\0e188555fc07979155175e147e7fb7f4a006b544
-Ñ
-Tsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/PackageAdded.java,f\2\f2f7c1577dca67d0132a3e38ee0a74d16831cd0f
 à
 Xsrc/main/java/co/com/servientrega/domain/delivery/shipments/events/AddresseeChanged.java,7\c\7c5f4c488e882b8a5882e15cee3397760836db00
 è

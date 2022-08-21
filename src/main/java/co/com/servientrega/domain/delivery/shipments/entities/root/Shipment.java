@@ -1,7 +1,9 @@
 package co.com.servientrega.domain.delivery.shipments.entities.root;
 
+import co.com.servientrega.domain.delivery.common.identity.EmployeeId;
 import co.com.servientrega.domain.delivery.common.values.Date;
 import co.com.servientrega.domain.delivery.common.values.Size;
+import co.com.servientrega.domain.delivery.common.values.Weight;
 import co.com.servientrega.domain.delivery.shipments.entities.DeliveryOrder;
 import co.com.servientrega.domain.delivery.shipments.entities.Invoice;
 import co.com.servientrega.domain.delivery.shipments.entities.Package;
@@ -43,9 +45,9 @@ public class Shipment extends AggregateEvent<ShipmentId> {
         return shipment;
     }
 
-    public void addInvoice(ShipmentId shipmentId, InvoiceId invoiceId, /*todo ManagerId managerId,*/ Money calculatedCost) {
+    public void addInvoice(ShipmentId shipmentId, InvoiceId invoiceId, EmployeeId issuerId, Money calculatedCost) {
         super
-                .appendChange(new InvoiceAdded(shipmentId, invoiceId, calculatedCost))
+                .appendChange(new InvoiceAdded(shipmentId, invoiceId, calculatedCost, issuerId))
                 .apply();
     }
 

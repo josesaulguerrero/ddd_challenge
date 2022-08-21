@@ -1,19 +1,25 @@
 package co.com.servientrega.domain.delivery.shipments.commands;
 
+import co.com.servientrega.domain.delivery.common.identity.EmployeeId;
 import co.com.servientrega.domain.delivery.common.values.Size;
+import co.com.servientrega.domain.delivery.common.values.Weight;
 import co.com.servientrega.domain.delivery.shipments.values.*;
 import co.com.sofka.domain.generic.Command;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class CreateShipment extends Command {
-    //todo private final Manager issuedBy;
+    private final EmployeeId issuerId;
     private final Sender sender;
     private final Addressee addressee;
     private final PackageName packageName;
     private final PackageDescription packageDescription;
     private final Weight packageWeight;
     private final Size packageSize;
+
+    public EmployeeId issuerId() {
+        return issuerId;
+    }
 
     public Sender sender() {
         return sender;
