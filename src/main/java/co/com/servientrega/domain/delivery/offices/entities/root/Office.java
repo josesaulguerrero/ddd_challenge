@@ -19,15 +19,16 @@ public class Office extends AggregateEvent<OfficeId> {
     protected Store store;
     protected Manager manager;
     protected Location location;
+    protected Date createAt;
 
     public Office(OfficeId entityId) {
         super(entityId);
         super.subscribe(new OfficeEventListener(this));
     }
 
-    public Office(OfficeId entityId, Location location) {
+    public Office(OfficeId entityId, Location location, Date createdAt) {
         super(entityId);
-        super.appendChange(new CreatedOffice(entityId, Date.now(), location)).apply();
+        super.appendChange(new CreatedOffice(entityId, createdAt, location)).apply();
     }
 
     public static Office from(OfficeId officeId, List<DomainEvent> events) {
@@ -100,5 +101,9 @@ public class Office extends AggregateEvent<OfficeId> {
 
     public Location location() {
         return location;
+    }
+
+    public Date createAt() {
+        return createAt;
     }
 }
