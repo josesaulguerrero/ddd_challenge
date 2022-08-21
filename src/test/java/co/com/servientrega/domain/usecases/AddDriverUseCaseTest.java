@@ -32,7 +32,7 @@ class AddDriverUseCaseTest {
     void setUp() {
         TransportId transportId = new TransportId(randomUUID);
         BDDMockito
-                .when(eventRepository.getEventsBy(randomUUID))
+                .when(this.eventRepository.getEventsBy(transportId.value()))
                 .thenReturn(List.of(
                         new DeliveryAssistantAdded(
                                 transportId,
@@ -54,7 +54,7 @@ class AddDriverUseCaseTest {
         Email email = new Email("driver@gmail.com");
         PhoneNumber phoneNumber = new PhoneNumber("43208502495");
         Salary salary = new Salary(new BigDecimal(5000000));
-        AddDriver command = new AddDriver(dni, fullName, email, phoneNumber, salary);
+        AddDriver command = new AddDriver(new TransportId(this.randomUUID), dni, fullName, email, phoneNumber, salary);
         AddDriverUseCase useCase = new AddDriverUseCase();
         useCase.addRepository(this.eventRepository);
 
