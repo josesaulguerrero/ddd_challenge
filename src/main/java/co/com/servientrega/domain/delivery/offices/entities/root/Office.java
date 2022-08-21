@@ -8,6 +8,7 @@ import co.com.servientrega.domain.delivery.offices.events.*;
 import co.com.servientrega.domain.delivery.offices.identity.OfficeId;
 import co.com.servientrega.domain.delivery.offices.identity.StoreId;
 import co.com.servientrega.domain.delivery.shipments.identity.ShipmentId;
+import co.com.servientrega.domain.delivery.transports.identity.TransportId;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 
@@ -83,9 +84,9 @@ public class Office extends AggregateEvent<OfficeId> {
                 .apply();
     }
 
-    public void startShipmentsDelivery(OfficeId officeId, StoreId storeId, Set<ShipmentId> shipmentsIds) {
+    public void startShipmentsDelivery(OfficeId officeId, StoreId storeId, Set<ShipmentId> shipmentsIds, TransportId transportId) {
         super
-                .appendChange(new ShipmentsDeliveryStarted(officeId, storeId, shipmentsIds))
+                .appendChange(new ShipmentsDeliveryStarted(transportId, officeId, storeId, shipmentsIds))
                 .apply();
     }
 
