@@ -12,8 +12,10 @@ import co.com.sofka.business.support.RequestCommand;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@ExtendWith(MockitoExtension.class)
 class AddStoreUseCaseTest {
     private final String randomUUID = generateRandomUUID();
 
@@ -49,7 +52,8 @@ class AddStoreUseCaseTest {
     @DisplayName("Test for AddStoreUseCase#executeUseCase")
     void executeUseCase() {
         // Arrange
-        AddStore command = new AddStore(new OfficeId(this.randomUUID), new Size(20.0, 20.0, 20.0));
+        Size size = new Size(20.0, 20.0, 20.0);
+        AddStore command = new AddStore(new OfficeId(this.randomUUID), size);
         AddStoreUseCase useCase = new AddStoreUseCase();
         useCase.addRepository(this.eventRepository);
 
@@ -63,6 +67,9 @@ class AddStoreUseCaseTest {
                 .get(0);
 
         // Assert
+        assertThat(event.storeId()).isNotNull();
+        assertThat(event.officeId().value()).isEqualTo(this.randomUUID);
+        assertThat(event.capacity()).isEqualTo(size);
         BDDMockito.verify(eventRepository).getEventsBy(this.randomUUID);
     }
 
