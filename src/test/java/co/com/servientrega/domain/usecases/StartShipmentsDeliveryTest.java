@@ -85,7 +85,7 @@ class StartShipmentsDeliveryTest {
     }
 
     @Test
-    @DisplayName("Test for PickUpShipmentsUseCase#executeUseCase")
+    @DisplayName("Test for StartShipmentsDeliveryUseCase#executeUseCase")
     void executeUseCase() {
         // Arrange
         StartShipmentsDelivery command = new StartShipmentsDelivery(this.transportId, this.officeId, this.storeId);
