@@ -5,13 +5,10 @@ import co.com.servientrega.domain.delivery.common.values.Location;
 import co.com.servientrega.domain.delivery.offices.commands.CreateOffice;
 import co.com.servientrega.domain.delivery.offices.events.CreatedOffice;
 import co.com.sofka.business.generic.UseCaseHandler;
-import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.BDDMockito;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.UUID;
@@ -22,9 +19,6 @@ import static org.assertj.core.api.Assertions.*;
 class CreateOfficeUseCaseTest {
     private final String randomUUID = generateRandomUUID();
 
-    @Mock
-    private DomainEventRepository eventRepository;
-
     @Test
     @DisplayName("Test for CreateOffice#executeUseCase")
     void executeUseCase() {
@@ -33,7 +27,6 @@ class CreateOfficeUseCaseTest {
         Location location = new Location("Santander", "Puente Nacional", "Street 23 # 63 - 3");
         CreateOffice command = new CreateOffice(createdAt, location);
         CreateOfficeUseCase useCase = new CreateOfficeUseCase();
-        useCase.addRepository(this.eventRepository);
 
         // Act
         CreatedOffice event = (CreatedOffice) UseCaseHandler
@@ -48,7 +41,6 @@ class CreateOfficeUseCaseTest {
         assertThat(event.officeId()).isNotNull();
         assertThat(event.createdAt().value()).isEqualTo(createdAt.value());
         assertThat(event.location()).isEqualTo(location);
-        BDDMockito.verify(eventRepository).getEventsBy(this.randomUUID);
     }
 
     private static String generateRandomUUID() {
