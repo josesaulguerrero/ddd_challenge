@@ -5,7 +5,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
-public abstract class Customer implements ValueObject<Sender.Props> {
+public abstract class Customer implements ValueObject<Customer.Props> {
     protected String fullName;
     protected String phoneNumber;
     protected String DNI;
@@ -22,7 +22,7 @@ public abstract class Customer implements ValueObject<Sender.Props> {
     }
 
     @Override
-    public Sender.Props value() {
+    public Props value() {
         return new Sender.Props() {
             @Override
             public String fullName() {
